@@ -39,6 +39,14 @@ class TracteurVertical implements ExternalInfoService {
 
 abstract class VehicleCreator {
     abstract implement(): ExternalInfoService;
+
+
+    // correction, était attendu:
+
+    // abstract factoryMethod(): ExternalInfoService;
+    // implement(): ExternalInfoService {
+    //     return this.factoryMethod();
+    // }
 }
 
 class CarVerticalCreator extends VehicleCreator {
