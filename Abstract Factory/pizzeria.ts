@@ -28,6 +28,7 @@ interface ICalzone extends IPizza {
 class MargheritaCalzone implements ICalzone {
     pizzaName: string = 'Calzone Margherita';
     cuire(): string {
+        this.plier();
         return 'Cuire la Calzone Margherita';
     }
     plier(): string {
@@ -38,6 +39,7 @@ class MargheritaCalzone implements ICalzone {
 class CarbonaraCalzone implements ICalzone {
     pizzaName: string = 'Calzone Carbonara';
     cuire(): string {
+        this.plier();
         return 'Cuire la Calzone Carbonara';
     }
     plier(): string {
