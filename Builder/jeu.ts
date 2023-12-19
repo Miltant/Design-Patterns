@@ -6,7 +6,7 @@ class Character {
     discretion: number = 0;
     agilite: number = 0;
     rapidite: number = 0;
-    equipement: string = '';
+    equipement: string = ''; // correction/todo: array
 
     display() {
         console.log(`${this.name} :\tforce ${this.force},\tcharisme ${this.charisme},\tintelligence ${this.intelligence},\tdiscretion ${this.discretion},\tagilite ${this.agilite},\trapidite ${this.rapidite},\tequipement ${this.equipement}`);
@@ -21,7 +21,7 @@ interface ICharacterBuilder {
     setDiscretion(value: number): ICharacterBuilder;
     setAgilite(value: number): ICharacterBuilder;
     setRapidite(value: number): ICharacterBuilder;
-    setEquipement(value: string): ICharacterBuilder;
+    setEquipement(value: string): ICharacterBuilder; // correction/todo: addEquipement à la place, pour push dans l'array
     getCharacter(): Character;
 }
 
