@@ -26,6 +26,8 @@ interface ICalzone extends IPizza {
 // et on va créer des variantes de nos pizze qui implémentent cette interface
 
 class MargheritaCalzone implements ICalzone {
+    //correction: voir plus bas!
+    
     pizzaName: string = 'Calzone Margherita';
     cuire(): string {
         this.plier();
@@ -41,9 +43,20 @@ class CarbonaraCalzone implements ICalzone {
     cuire(): string {
         this.plier();
         return 'Cuire la Calzone Carbonara';
+
+        // correction: était attendu un safeguard et un state pour savoir si la calzone est pliée ou non
+        // if (this.pliée) {
+        //     return 'Cuire la Calzone Carbonara';
+        // } else {
+        //    throw new Error('La calzone doit être pliée avant d\'être cuite');
+        // }
     }
     plier(): string {
         return 'Plier la Calzone Carbonara';
+
+        // correction:
+        // this.pliée = true;
+        // return 'Plier la Calzone Carbonara';
     }
 }
 
