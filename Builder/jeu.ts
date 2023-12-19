@@ -32,8 +32,14 @@ class ConcreteCharacterBuilder implements ICharacterBuilder {
         this.#character = new Character();
     }
 
+    reset() {
+        this.#character = new Character();
+    }
+
     getCharacter() {
-        return this.#character;
+        const character = this.#character;
+        this.reset();
+        return character;
     }
 
     setName(name: string) {
@@ -88,8 +94,14 @@ class WarriorBuilder implements ICharacterBuilder {
         this.#character.rapidite = 5;
     }
 
+    reset() {
+        this.#character = new Character();
+    }
+
     getCharacter() {
-        return this.#character;
+        const character = this.#character;
+        this.reset();
+        return character;
     }
 
     setName(name: string) {
