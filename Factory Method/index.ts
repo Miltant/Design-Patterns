@@ -8,15 +8,18 @@ import { CarVerticalCreator, CamionVerticalCreator, TracteurVerticalCreator, Veh
 const fourÀMargherita = new FourÀMargherita();
 const fourÀCarbonara = new FourÀCarbonara();
 
+class Pizzaïolo {
+    static commander(four: FourÀMargherita | FourÀCarbonara) {
+        return four.commander();
+    }
+
+}
+
 console.log('Client: Commande de pizza margherita:');
-console.log(fourÀMargherita.commander());
+console.log(Pizzaïolo.commander(fourÀMargherita));
 
 console.log('Client: Commande de pizzas carbo:');
-console.log(fourÀCarbonara.commander());
-console.log(fourÀCarbonara.commander());
-
-console.log('Client: Commande de pizza margherita:');
-console.log(fourÀMargherita.commander());
+console.log(Pizzaïolo.commander(fourÀCarbonara));
 
 
 /*************/
