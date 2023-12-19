@@ -80,7 +80,8 @@ class FourÀCarbonara extends FourÀPizza {
 }
 
 export {
-        IPizza,          ICalzone, FourÀPizza,
-    Margherita, MargheritaCalzone, FourÀMargherita,
-     Carbonara,  CarbonaraCalzone, FourÀCarbonara
+/*                  Variété 1              Variété 2       Factories         */
+/* Interfaces */       IPizza,              ICalzone,      FourÀPizza,
+/*  Produit 1 */   Margherita,     MargheritaCalzone,      FourÀMargherita,
+/*  Produit 2 */    Carbonara,      CarbonaraCalzone,      FourÀCarbonara
 };
