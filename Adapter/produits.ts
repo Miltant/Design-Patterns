@@ -37,7 +37,7 @@ interface ICodeBarreApi {
 class NewCodeBarreApi {
     fetch(code: string) : Promise<INewApiProduit> {
         return new Promise((resolve, reject) => {
-            return {
+            resolve({
                 data: {
                     price: 12,
                     quantity: 1,
@@ -47,7 +47,7 @@ class NewCodeBarreApi {
                     size: "12x24x3",
                     weight: 222
                 }
-            }
+            });
         })
     }
 }
