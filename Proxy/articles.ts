@@ -5,11 +5,10 @@ interface IArticle {
 
 class RealArticle implements IArticle {
     readonly id: number;
-    private article: string;
+    private article = 'dummy article: ' + Math.random().toString(36).substring(7);
 
     constructor(id: number = -1) {
         this.id = id;
-        this.article = '';
     }
 
     public async getArticle(): Promise<string> {
