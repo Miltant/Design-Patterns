@@ -26,15 +26,11 @@ const ids = ['324THT54GZG', '324F24TG35R', '23RI23UFJ'];
 // retravail en façade
 
 class OrderFacade {
-    private systemProduct: ProductSystem;
-    private orderSystem: OrderSystem;
-    private paymentSystem: PaymentSystem;
-
-    constructor() {
-        this.systemProduct = new ProductSystem();
-        this.orderSystem = new OrderSystem();
-        this.paymentSystem = new PaymentSystem();
-    }
+    constructor(
+        private systemProduct: ProductSystem = new ProductSystem(),
+        private orderSystem: OrderSystem = new OrderSystem(),
+        private paymentSystem: PaymentSystem = new PaymentSystem()
+    ) {}
 
     public processOrder(ids: string[]) {
         const products = ids.map((item) => {
