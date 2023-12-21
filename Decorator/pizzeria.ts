@@ -1,7 +1,7 @@
 interface IPizza {
     pizzaName: string;
     cuire(): string;
-    price(): number;
+    prix(): number;
 }
 
 class Margherita implements IPizza {
@@ -9,7 +9,7 @@ class Margherita implements IPizza {
     cuire(): string {
         return 'Cuire la Margherita';
     }
-    price(): number {
+    prix(): number {
         return 10;
     }
 }
@@ -19,7 +19,7 @@ class Carbonara implements IPizza {
     cuire(): string {
         return 'Cuire la Carbonara';
     }
-    price(): number {
+    prix(): number {
         return 11;
     }
 }
@@ -43,7 +43,7 @@ class MargheritaCalzone implements ICalzone {
     plier(): string {
         return 'Plier la Calzone Margherita';
     }
-    price(): number {
+    prix(): number {
         return 12;
     }
 }
@@ -68,7 +68,7 @@ class CarbonaraCalzone implements ICalzone {
         // this.pliée = true;
         // return 'Plier la Calzone Carbonara';
     }
-    price(): number {
+    prix(): number {
         return 13;
     }
 }
@@ -124,7 +124,7 @@ abstract class ISupplément implements IPizza {
         this.pizza = pizza;
     }
     abstract cuire(): string;
-    abstract price(): number;
+    abstract prix(): number;
 }
 
 class Viande extends ISupplément {
@@ -136,8 +136,8 @@ class Viande extends ISupplément {
     cuire(): string {
         return `${this.pizza.cuire()} + Cuire la viande`;
     }
-    price(): number {
-        return this.pizza.price() + 2;
+    prix(): number {
+        return this.pizza.prix() + 2;
     }
 }
 
@@ -150,8 +150,8 @@ class Fromage extends ISupplément {
     cuire(): string {
         return `${this.pizza.cuire()} + Cuire le fromage`;
     }
-    price(): number {
-        return this.pizza.price() + 1;
+    prix(): number {
+        return this.pizza.prix() + 1;
     }
 }
 
@@ -164,8 +164,8 @@ class Burrata extends ISupplément {
     cuire(): string {
         return `${this.pizza.cuire()} + Cuire la burrata`;
     }
-    price(): number {
-        return this.pizza.price() + 2;
+    prix(): number {
+        return this.pizza.prix() + 2;
     }
 }
 
@@ -178,8 +178,8 @@ class Raclette extends ISupplément {
     cuire(): string {
         return `${this.pizza.cuire()} + Cuire la raclette`;
     }
-    price(): number {
-        return this.pizza.price() + 3;
+    prix(): number {
+        return this.pizza.prix() + 3;
     }
 }
 
@@ -192,8 +192,8 @@ class SansViande extends ISupplément {
     cuire(): string {
         return `${this.pizza.cuire()} + Cuire sans viande`;
     }
-    price(): number {
-        return this.pizza.price() - 2;
+    prix(): number {
+        return this.pizza.prix() - 2;
     }
 }
 
@@ -206,8 +206,8 @@ class SansFromage extends ISupplément {
     cuire(): string {
         return `${this.pizza.cuire()} + Cuire sans fromage`;
     }
-    price(): number {
-        return this.pizza.price() - 2;
+    prix(): number {
+        return this.pizza.prix() - 2;
     }
 }
 
