@@ -1,0 +1,1 @@
+Challenges from [this medium article](https://medium.com/tradeling/solid-principles-using-typescript-d9d705be7d48).
