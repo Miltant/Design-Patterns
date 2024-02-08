@@ -22,12 +22,6 @@ export class OrganicRecyclingStrategy implements IRecyclingStrategy {
   }
 }
 
-export class RecycleRecyclingStrategy implements IRecyclingStrategy {
-  recycle(wasteObject: WasteObject) {
-    return 12 * (wasteObject.state / 100);
-  }
-}
-
 export class ReuseRecyclingStrategy implements IRecyclingStrategy {
   recycle(wasteObject: WasteObject) {
     return 12 * (wasteObject.state / 100);

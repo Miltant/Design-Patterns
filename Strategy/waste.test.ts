@@ -2,7 +2,6 @@ import { expect, test } from "vitest";
 import {
   Waste,
   OrganicRecyclingStrategy,
-  RecycleRecyclingStrategy,
   ReuseRecyclingStrategy,
   BulkyRecyclingStrategy,
   isWasteWorthIt,
@@ -30,13 +29,7 @@ test("OrganicRecyclingStrategy", () => {
   expect(value).toBe(0);
 });
 
-test("RecycleRecyclingStrategy", () => {
-  const strategy = new RecycleRecyclingStrategy();
-  const value = strategy.recycle(cfg);
-  expect(value).closeTo(7.2, 0.0001);
-});
-
-test("ReuseRecyclingStrategy", () => {
+test("Reuse/Recycle RecyclingStrategy", () => {
   const strategy = new ReuseRecyclingStrategy();
   const value = strategy.recycle(cfg);
   expect(value).closeTo(7.2, 0.0001);
@@ -53,7 +46,7 @@ test("isWasteWorthIt has a reasonable threshold", () => {
   const result1 = isWasteWorthIt(waste1, cfg);
   expect(result1).toBe(false);
 
-  const waste2 = new Waste(new RecycleRecyclingStrategy()); // 7.2 > 5
+  const waste2 = new Waste(new ReuseRecyclingStrategy()); // 7.2 > 5
   const result2 = isWasteWorthIt(waste2, cfg);
   expect(result2).toBe(true);
 });

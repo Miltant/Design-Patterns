@@ -64,3 +64,14 @@ test("DueDateStrategy", () => {
     "Task 1",
   ]);
 });
+
+
+test("Sorting preserves objects", () => {
+  const taskManager = new TaskManager();
+  tasks.forEach((task) => taskManager.addTask(task));
+
+  const sortedTasks = taskManager.sortTasks();
+  tasks.forEach((task) => {
+    expect(sortedTasks).toContain(task);
+  });
+});
