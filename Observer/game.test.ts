@@ -107,13 +107,16 @@ test("GameState should notify observers", () => {
   const observer2 = new AchievementObserver();
   const notifySpy1 = vi.spyOn(observer1, "notify");
   const notifySpy2 = vi.spyOn(observer2, "notify");
+  
   gameState.addObserver(observer1);
   gameState.addObserver(observer2);
+
   gameState.setPosition(5, 10);
   expect(notifySpy1).toHaveBeenNthCalledWith(1, "position", "x", 5);
   expect(notifySpy1).toHaveBeenNthCalledWith(2, "position", "y", 10);
   expect(notifySpy2).toHaveBeenNthCalledWith(1, "position", "x", 5);
   expect(notifySpy2).toHaveBeenNthCalledWith(2, "position", "y", 10);
+  
   gameState.addItem({ name: "Sword", quantity: 1 });
   expect(notifySpy1).toHaveBeenNthCalledWith(3, "inventory", "Sword", 1);
   expect(notifySpy2).toHaveBeenNthCalledWith(3, "inventory", "Sword", 1);
