@@ -1,1 +1,1 @@
-Les `index.ts` servent de "tests" et sont exécutables avec `ts-node index.ts`.
+`ts-node /$Pattern/index.ts` or `npm run test /$Pattern/`
