@@ -146,9 +146,15 @@ class WarriorBuilder implements ICharacterBuilder {
     }
 }
 
-// la flemme xd
+// on pourrait continuer ainsi...
+//
 // class MageBuilder implements ICharacterBuilder {
+// ...
+// }
+//
 // class RogueBuilder implements ICharacterBuilder {
+// ...
+// }
 
 class CharacterDirector {
     #builder: ICharacterBuilder;
